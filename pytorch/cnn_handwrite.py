@@ -136,7 +136,7 @@ def recognize():
     # 获取预测结果
     pred = torch.argmax(output, 1)
     # 显示预测结果
-    label.config(text='预测结果为：{}'.format(pred.item()))
+    label.config(text='预测结果为：{}, 确信度为：{:.2f}%'.format(pred.item(), torch.max(torch.nn.functional.softmax(output), 1)[0].item() * 100))
 
 # 识别按钮
 button_recognize = tk.Button(window, text='识别', font=('Arial', 12), width=10, height=1, command=recognize)
