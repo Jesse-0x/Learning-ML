@@ -138,8 +138,7 @@ for epoch in range(epochs):
     plt.plot(range(len(g_losses)), g_losses, label='g_loss')
     plt.plot(range(len(d_losses)), d_losses, label='d_loss')
     plt.legend()
-    if (epoch + 1) % 10 == 0:
-        plt.show()
+    plt.savefig('./loss.png')
 
 
 
