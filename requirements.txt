@@ -8,3 +8,4 @@ torchvision~=0.15.0
 torchviz~=0.0.2
 pillow~=9.4.0
 sympy~=1.11.1
+keras~=2.11.0
